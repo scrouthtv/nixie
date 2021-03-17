@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DG10Q1_DIL
+D DG10Q1 tube soldered to two 6-pin connectors, 12mm apart
+K connector
+F ~
+$ENDCMP
+#
+#End Doc Library
