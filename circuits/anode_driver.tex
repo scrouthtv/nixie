@@ -1,0 +1,26 @@
+\documentclass[margin = 24mm, tikz]{standalone}
+
+\usepackage{mathspec}
+\setallmainfonts(Digits,Latin){osifont.ttf}
+
+\usepackage{siunitx}
+\sisetup{locale = DE, retain-explicit-plus}
+
+\usepackage[european]{circuitikz}
+
+\begin{document}
+	\begin{circuitikz}[]
+		\node [nigfete] (fet) at (3, -.75) {Q};
+		\draw (0, -1) to [short, o-] (fet.G);
+		\node [above] at (0, -1) { \SI{+5}{\volt} };
+
+		\node [diodetube, filament, nocathode] (tube) at (5, -.5) {};
+		\node [right] at (tube.east) {V};
+
+		\draw (fet.S) to node[rground] {} ++(0, 0);
+
+		\draw (fet.D) to [R = R] ++(-2.5, 0) to [short, -o] ++(-.5, 0)
+			node[above] { \SI{+20}{\volt} };
+		\draw (fet.D) [short, *-] to ++(0, 1) -| (tube.anode);
+	\end{circuitikz}
+\end{document}
