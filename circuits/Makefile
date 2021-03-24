@@ -8,8 +8,12 @@ LATEX=xelatex
 %.pdf : %.tex
 	${LATEX} $< 
 
-%.svg : %.pdf
-	dvisvgm --pdf $<
+# https://github.com/mgieseki/dvisvgm/issues/150
+%.svg : %.ps
+	dvisvgm --eps $<
+
+%.ps : %.pdf
+	pdftops $<
 
 all: *.svg
 
