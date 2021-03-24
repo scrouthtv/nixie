@@ -17,4 +17,5 @@ clean:
 	rm -rf *.aux *.fdb_latexmk *.fls *.log *.pdf *.svg *.synctex.*
 
 check:
-	stat anode_driver.pdf
+	stat anode_driver.svg
+	stat filament_driver.svg
