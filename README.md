@@ -1,6 +1,4 @@
-# Building a VFD clock
-
-## VFD tubes
+# About VFD tubes
 
 <!--![Principle of VFD operation](./sources/futaba_concept.jpg)-->
 <img align="right" width="398px" style="margin-left: 20px;" src="./sources/futaba_concept.jpg" />
@@ -18,9 +16,9 @@ In the simplest case, the anodes make up an 8-figure consisting of seven individ
 Each anode has its own wire leaving the casing.
 The whole tube must be "activated" by setting the grid to a higher potential compared to the filament, which allows for multiplexing multiple tubes.
 
-[Image Source: VFD | Futaba Corporation](http://futaba.co.jp/en/display/vfd/index.html)
+Image Source: [VFD | Futaba Corporation](http://futaba.co.jp/en/display/vfd/index.html)
 
-## The tubes
+# The tubes
 
 I recently got ten VFD tubes labelled as **Futaba DG10Q1 3GS** out of an old calculator that was due for trash:
 
@@ -32,8 +30,25 @@ The tubes themselves look fantastic:
 
 ![Frontview of the DG10Q1](./media/frontview-00.webp)
 
-I wasn't able to find a datasheet online.
-
 Image Source: Private work | Used with permission.
 
-## Filament Driver
+## Testing a tube
+
+I wasn't able to find a datasheet online, only this image that circulates on the internet:
+
+![Pinout of the DG10Q1, bottom view](./sources/dg10q1-pinout.jpg)
+
+**Keep in mind that this is the bottom view.**
+
+The filament in this tube is a thin wire in the front center that runs from the bottom to the top.
+It glows orange-ish after applicating a high enough current to it. 
+
+My tubes have a set of red-colored wires for the filament. If yours don't, try to find the pair of pins wich has the lowest resistance (lower than 10 ohms). 
+
+Slowly increasing the voltage across these two pins, they started glowing at around 0.7 V.
+
+As a next step, I applied 18 V to both the grid and a segment to see it glowing.
+
+Image Source: [DG10Q1 | AsahiNet](https://ne.jp/asahi/shared/o-family/ElecRoom/PARTS/DISPLAY/ElDG10Q1.html)
+
+# Filament Driver
