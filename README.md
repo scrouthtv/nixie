@@ -41,7 +41,7 @@ I wasn't able to find a datasheet online, only this image that circulates on the
 **Keep in mind that this is the bottom view.**
 
 The filament in this tube is a thin wire in the front center that runs from the bottom to the top.
-It glows orange-ish after applicating a high enough current to it. 
+It glows orange-ish after applying a high enough current to it. 
 
 My tubes have a set of red-colored wires for the filament. If yours don't, try to find the pair of pins wich has the lowest resistance (lower than 10 ohms). 
 
